@@ -1,0 +1,17 @@
+footer {
+    .top-footer {
+        background: url(../../img/footer-bg.jpg) no-repeat center center;
+        padding: 100px 0;
+        color: #fff;
+        background-size: cover;
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 20px 0 10px;
+
+        .container {
+            text-align: center!important;
+        }
+    }
+}
