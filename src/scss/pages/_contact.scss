@@ -1,0 +1,34 @@
+
+body.page-template-page-contactus {
+    footer#footer {
+        .top-footer {
+            display: none!important;
+        }
+    }
+}
+
+main.contact-page {
+    color: #000;
+
+    .content {
+        @media only screen and (min-width: 1200px) {
+            padding: 0 100px;
+        }
+    }
+
+    .wpcf7-form {
+        label {
+            color: #000;
+        }
+
+        .wpcf7-form-control:not(.wpcf7-submit) {
+            border: 1px solid #929294;
+            background: #fff;
+            padding: 15px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

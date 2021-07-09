@@ -25,16 +25,18 @@ get_header();
                 
                     <div class="column">
                         <div class="p-content">
-                            <figure>
-                                <a class="image-overlay" href="<?php echo $link; ?>">
+                            <figure  class="thumbnail  new-thumbnail">
+                                <!-- <a class="image-overlay" href="<?php echo $link; ?>"> -->
                                     <?php sod_generate_image_tag($image); ?>                                    
-                                </a>
+                                <!-- </a> -->
+                                <p class="p-text">
+                                    <a href="<?php echo $link; ?>">
+                                    <?php echo $title;?>
+                                    </a>
+                                </p>
+                                <div class="tri-area" data-color="#fff"></div>
                             </figure>
-                            <p class="p-text">
-                                <a href="<?php echo $link; ?>">
-                                <?php echo $title;?>
-                                </a>
-                            </p>
+                            
                         </div>
                     </div>
                 
