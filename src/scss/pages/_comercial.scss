@@ -850,13 +850,13 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #0079c2;
 }
 a:visited {
-  color: #fff;
+  color: #0079c2;
 }
 a:hover, a:focus, a:active {
-  color: #fff;
+  color: #0079c2;
 }
 a:focus {
   outline: thin dotted;
@@ -3846,7 +3846,7 @@ header .logo img {
 // #wpadminbar + #page.site header.site-header {
 //   top: 32px;
 // }
-
+/*
 ul.menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3915,6 +3915,8 @@ ul.menu {
     padding: 0 15px;
   }
 }
+
+*/
 .banner-slider,
 .static-banner {
   overflow: hidden;
@@ -4392,9 +4394,6 @@ p.section-sub-title {
   color: #000;
 }
 
-body main#primary > div:last-child {
-  padding-bottom: 100px;
-}
 
 .section3-carousel .slick-arrow {
   display: none !important;
@@ -4848,6 +4847,10 @@ body main#primary > div:last-child {
   }
 
   text-align: center;
+}
+
+[data-section] + .testimonial-section {
+  margin-top: 50px;
 }
 
 .testimonial-section {

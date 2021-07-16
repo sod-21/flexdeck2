@@ -19,8 +19,12 @@ h3 {
     text-align: center;
     margin-bottom: 100px;
     
+    @media  only screen and (max-width: 1020px) {
+        margin-bottom: 80px;        
+    }
+
     @media  only screen and (max-width: 990px) {
-        margin-bottom: 65px;        
+        margin-bottom: 60px;        
     }
 
     @media  only screen and (max-width: 600px) {
@@ -122,8 +126,12 @@ header {
 }
 
 ul.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     @media only screen and (max-width: 1020px) {
         position: absolute;
@@ -131,6 +139,8 @@ ul.menu {
         top: 70px;
         left: 0;
         background: #040707;
+        height: calc(100vh - 116px);
+        overflow: scroll;
     }
 
     li.menu-item{
@@ -148,6 +158,10 @@ ul.menu {
             margin: 15px 10px;
             flex-direction: column;
             align-items: flex-start;
+
+            &:last-child {
+                margin-bottom: 100px;
+            }
         }
 
         @media only screen and (max-width: $xl-desktop) {
@@ -441,6 +455,15 @@ ul.menu {
 
         @media only screen and (max-width: 1020px) {
             display: none;
+        }
+    }
+}
+
+header.sticky-header {
+
+    ul.menu {
+        @media only screen and (max-width: 1020px) {
+            height: calc(100vh - 70px);           
         }
     }
 }
@@ -965,4 +988,47 @@ body.search {
 .read-to-section {
     padding-bottom: 0!important;
     overflow: hidden;
+}
+
+
+
+#primary-menu {
+    .secondary-menu-item {
+        display: none!important;
+    }
+
+    @media only screen and (max-width: 1020px) {
+        .secondary-menu-item {
+            display: flex!important;
+
+            .sub-menu {
+                transform: none!important;
+            }
+
+            &.yellow-btn  {
+                a:hover {
+                    background: transparent;
+                }
+            }
+
+            &.search_panel  {
+                .sub-menu {
+                    width: 100%;
+
+                    .search-form {
+                        margin-top: 15px;
+        
+                        .search-field {
+                            width: 100%;
+                        }
+                    }
+    
+                }
+
+                a {
+                    display: none;
+                }
+            }
+        }
+    }
 }

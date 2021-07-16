@@ -25,6 +25,7 @@ get_header();
                 
                     <div class="column">
                         <div class="p-content">
+                            <a href="<?php echo $link; ?>">
                             <figure  class="thumbnail  new-thumbnail">
                                 <!-- <a class="image-overlay" href="<?php echo $link; ?>"> -->
                                     <?php sod_generate_image_tag($image); ?>                                    
@@ -36,7 +37,7 @@ get_header();
                                 </p>
                                 <div class="tri-area" data-color="#fff"></div>
                             </figure>
-                            
+                            </a>
                         </div>
                     </div>
                 

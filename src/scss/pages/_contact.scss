@@ -21,10 +21,11 @@ main.contact-page {
             color: #000;
         }
 
-        .wpcf7-form-control:not(.wpcf7-submit) {
+        .wpcf7-form-control:not(.wpcf7-submit):not(.wpcf7-recaptcha) {
             border: 1px solid #929294;
             background: #fff;
             padding: 15px;
+            color: #000!important;
         }
 
         p {

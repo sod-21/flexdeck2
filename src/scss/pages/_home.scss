@@ -7,7 +7,7 @@
         color: #fff;
     }
 
-    .wpcf7-form-control {
+    .wpcf7-form-control:not(.wpcf7-recaptcha) {
         width: 100%;
         border: 1px solid #fff;
         background: #384554;
@@ -32,10 +32,11 @@
             text-transform: uppercase;
             cursor: pointer;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background: #fff;
-                border: 1px solid #fff;
-                color: #0079c2;
+                border: 1px solid #0079c2;
+                color: #0079c2!important;
             }
         }
 
@@ -65,7 +66,11 @@
     &:hover {
         border: 1px solid #0079c2;
         background: #fff;
-        color: #0079c2;
+        color: #0079c2!important;
+    }
+
+    &:active, &:focus, &:visited {
+        color: #fff;
     }
 }
 
@@ -264,8 +269,13 @@ p.section-sub-title {
 
 body {
     main#primary {
-        > div:last-child {
+        > div:last-child{
             padding-bottom: 100px;
+
+            &.boxed_last {
+                padding-bottom: 0;
+                margin-bottom: 100px;
+            }
         }
     }
 }
@@ -359,3 +369,51 @@ h1.page-title {
     margin: 0;
     padding: 0;
 }
+
+.wpcf7 form.sent .wpcf7-response-output {
+    background: #46b450;
+    margin: 0;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+    background: #ffb900;
+    margin: 0;
+}
+
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

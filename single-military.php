@@ -77,10 +77,13 @@ get_header();
 					}
 				}
 				?>
-				<div id="industry_items" class="item_list_container_from_<?php echo $left . "  " . $shuffle; ?> ">
+				
 				<?php
 				$item_list = get_field("item_list");
 				if ($item_list && count($item_list) > 0):
+					?>
+					<div id="industry_items" class="item_list_container_from_<?php echo $left . "  " . $shuffle; ?> ">
+					<?php
 					foreach ($item_list as $key => $item):
 						$bg_color = $item["background_color"] ? $item["background_color"] : "#fff";
 
@@ -139,8 +142,9 @@ get_header();
 					</div>
 				</div>
 				<?php endforeach; ?>
+				</div>
 				<?php endif; ?>
-					</div>
+				
 
 				<?php
 					$testimonial_title = get_field("testimonial_title");

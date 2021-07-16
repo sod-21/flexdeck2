@@ -312,3 +312,17 @@ add_filter( 'pre_get_posts', function ($query) {
 
     return $query;
 });
+
+add_action( 'wpcf7_init', function() {
+    wpcf7_add_form_tag( 'current_url', 'sod_current_url_form_tag_handler', array( 'name-attr' => true ) );
+} );
+ 
+ 
+function sod_current_url_form_tag_handler( $tag ) { 
+    global $wp;
+    $name = $tag['name'];    
+    if (empty($name)) return '';
+    $url = home_url( $wp->request );
+    $html = '<input type="hidden" name="' . $name . '" value="' . $url . '" />';
+    return $html;
+}
