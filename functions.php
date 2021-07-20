@@ -1,6 +1,6 @@
 <?php
 
-define( 'SOD_VERSION', rand());
+define( 'SOD_VERSION', "1.0.1");
 
 function sod_scripts() {
     wp_register_style( 'adobe-font', 'https://use.typekit.net/prg2xec.css', array(), SOD_VERSION );

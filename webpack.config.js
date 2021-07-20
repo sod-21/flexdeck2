@@ -46,7 +46,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              name: 'images/design/[name].[hash:6].[ext]',
+              name: 'images/[name].[hash:6].[ext]',
               publicPath: '../',
               limit: environment.limits.images,
             },
