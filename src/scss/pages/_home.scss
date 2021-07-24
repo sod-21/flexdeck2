@@ -46,7 +46,11 @@
     }
 }
 
-.s-btn {
+.s-btn,
+button.s-btn,
+input[type=submit].s-btn,
+input[type=reset].s-btn,
+input[type=button].s-btn {
     text-align: center;    
     background: #0079c2;
     border: 0;
