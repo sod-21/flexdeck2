@@ -579,6 +579,14 @@ header.sticky-header {
             color: #fff;
             transform: translate(-50%, 0);
 
+            @media only screen and (max-width: 600px) {
+                padding: 20px;
+
+                h1.page-title {
+                    font-size: 24px;
+                }
+            }            
+
             &.new-content {
                 margin: 0;                
                 position: absolute;
@@ -597,6 +605,11 @@ header.sticky-header {
                     max-width: 800px;
                     width: calc(100% - 100px);
                     margin: 100px 50px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    margin: 100px 20px;
+                    width: calc(100% - 40px)!important;
                 }
 
                 p {
