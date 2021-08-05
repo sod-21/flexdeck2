@@ -43,8 +43,10 @@
 				
 				if ($custom_logo_id) {
 					$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+					//
 					?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home" title="<?php echo bloginfo( 'name' ); ?>"><img src="<?php echo $image[0]; ?>" /></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home" title="<?php echo bloginfo( 'name' ); ?>"><img src="<?php echo $image[0]; ?>" width="320" height="70" /></a>
+
 					<?php
 				} else {
 					?>

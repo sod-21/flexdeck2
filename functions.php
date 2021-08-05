@@ -1,6 +1,6 @@
 <?php
 
-define( 'SOD_VERSION', rand());
+define( 'SOD_VERSION', '1.0.1');
 
 function sod_scripts() {
     wp_register_style( 'adobe-font', 'https://use.typekit.net/prg2xec.css', array(), SOD_VERSION );
@@ -11,9 +11,6 @@ function sod_scripts() {
 
     wp_deregister_style('_s-style');
 
-    // wp_register_script('sod-slick', get_stylesheet_directory_uri() .'/node_modules/slick-carousel/slick/slick.min.js', array ('jquery'), SOD_VERSION);
-    // wp_enqueue_script( 'sod-slick' );
-
     wp_register_script('sod-lib', get_stylesheet_directory_uri() .'/vendor/lib.js', array('jquery'), SOD_VERSION);
     wp_enqueue_script( 'sod-lib' );
     
@@ -23,7 +20,24 @@ function sod_scripts() {
     
 }
 
+function remove_sod_scripts() {
+    if (!is_admin() && !is_page('apply-online')) {
+        wp_dequeue_style( 'ufb-jquery-ui' );
+        wp_dequeue_style( 'ufb-font-css' );
+        wp_dequeue_style( 'ufb-custom-select-css' );
+        wp_dequeue_style( 'ufb-front-css' );
+        wp_dequeue_style( 'ufb-fileuploader-animation' );
+        wp_dequeue_style( 'ufb-fileuploader' );
+
+        wp_dequeue_script( 'ufb-fileuploader' );
+        wp_dequeue_script( 'ufb-custom-select-js' );
+        wp_dequeue_script( 'ufb-touch-ui' );
+        wp_dequeue_script( 'ufb-front-js' );
+    }
+}
+
 add_action( 'wp_enqueue_scripts', 'sod_scripts', 11 );
+add_action( 'wp_enqueue_scripts', 'remove_sod_scripts', 100);
 
 // function sod_file_types_to_uploads ($file_types) {
 //     $new_filetypes = array();
@@ -205,7 +219,8 @@ function sod_generate_image_tag($url, $classes=[]) {
         list($width, $height, $type, $attr) = getimagesize($url);
         $className = implode(" ", $classes);
         $placeholder = get_stylesheet_directory_uri() . '/img/transparent.png';
-        echo "<img src='$placeholder'  src='$placeholder' width='$width' height='$height' class='lazy $className' data-src='$url' />";
+        // echo "<img src='$placeholder'  src='$placeholder' width='$width' height='$height' class='lazy $className' data-src='$url' />";
+        echo "<img src='$placeholder'  src='$placeholder' width='1' height='1' class='lazy $className' data-src='$url' />";
     }
 
     return ;
@@ -346,7 +361,6 @@ function zoho_form_func_3($atts) {
    <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='max-width: 600px;'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
    <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
-   <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads4805080000000479003 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4805080000000479003()' accept-charset='UTF-8'>
  <input type='text' style='display:none;' name='xnQsjsdp' value='3dd075b2ab7a579bc9febfdb0d5acfc42a540e22ad64e3675afda1b0e7b6d786'></input>
  <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
@@ -629,7 +643,24 @@ tooltip.style.display='none';
 }
 }
 </script><script type='text/javascript' id='VisitorTracking'>var $zoho= $zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:'5f09baca57a83065cf4d63a1379d04b275bdc00ebb03b958e4e80983e86119c3', values:{},ready:function(){}};var d=document;s=d.createElement('script');s.type='text/javascript';s.id='zsiqscript';s.defer=true;s.src='https://salesiq.zoho.com/widget';t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);function trackVisitor(){try{if($zoho){var LDTuvidObj = document.forms['WebToLeads4805080000000479003']['LDTuvid'];if(LDTuvidObj){LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();}var firstnameObj = document.forms['WebToLeads4805080000000479003']['First Name'];if(firstnameObj){name = firstnameObj.value +' '+name;}$zoho.salesiq.visitor.name(name);var emailObj = document.forms['WebToLeads4805080000000479003']['Email'];if(emailObj){email = emailObj.value;$zoho.salesiq.visitor.email(email);}}} catch(e){}}</script>
-<!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=6f017a7e93acf78ff892d147c52f3a1dcab65d2c849dbb64d4e62f3559df9ee3gid3dd075b2ab7a579bc9febfdb0d5acfc42a540e22ad64e3675afda1b0e7b6d786gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>
+<script type="text/javascript">
+    window.addEventListener('load', function() {
+        
+        var node = document.createElement("script");
+        node.src = 'https://www.google.com/recaptcha/api.js';
+        node.type = "text/javascript";
+        node.id = "recaptcha_js";
+        document.getElementsByTagName('HEAD')[0].appendChild(node);
+
+        node = document.createElement("script");
+        node.src = 'https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=6f017a7e93acf78ff892d147c52f3a1dcab65d2c849dbb64d4e62f3559df9ee3gid3dd075b2ab7a579bc9febfdb0d5acfc42a540e22ad64e3675afda1b0e7b6d786gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513';
+        node.type = "text/javascript";
+        node.id = "wf_anal";
+        document.getElementsByTagName('HEAD')[0].appendChild(node);
+        
+    });
+</script>
+</form>
 </div>
 
     <?php
