@@ -8,11 +8,27 @@
  *
  * @package _s
  */
-
+	$footer = get_field("footer");
+	
 ?>
 
 	<footer id="footer" class="site-footer">
+		<?php
+		if ($footer == "footer2"):
+				$data = get_field( "footer2", "option" );
 
+			if ($data):
+			
+			?>
+			<div class="site-info footer2">
+				<div class="container">
+					<?php echo $data; ?>
+				</div>
+			</div>
+			<?php
+			endif;
+		else: 
+		?>
 		<div class="top-footer">
 			<div class="container">
 				<div class="columns">
@@ -36,7 +52,6 @@
 			</div>
 		</div>
 
-
 		<div class="site-info">
 			<p class="container">
 			<?php 
@@ -48,6 +63,10 @@
 			?>
 			</p>
 		</div><!-- .site-info -->
+		<?php
+
+		endif; ?>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

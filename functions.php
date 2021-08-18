@@ -669,3 +669,399 @@ tooltip.style.display='none';
 
     return $content;
 }
+
+add_shortcode( 'zoho_form4', 'zoho_form_func_4' );
+function zoho_form_func_4() {
+    $a = shortcode_atts( array(
+        'form_title' => '',
+        'form_description' => '',
+    ), $atts );
+
+    ob_start();
+?>
+<!-- Note :
+   - You can modify the font style and form style to suit your website. 
+   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code.
+   - The Mandatory check script can modified as to suit your business needs.
+   - It is important that you test the modified form before going live.-->
+   <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 900px;'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>   
+<form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads4805080000002819028 method='POST' enctype='multipart/form-data' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4805080000002819028()' accept-charset='UTF-8'>
+ <input type='text' style='display:none;' name='xnQsjsdp' value='3dd075b2ab7a579bc9febfdb0d5acfc42a540e22ad64e3675afda1b0e7b6d786'></input>
+ <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
+ <input type='text' style='display:none;' name='xmIwtLD' value='6f017a7e93acf78ff892d147c52f3a1df3276daafc6826088aa23c749a85f027'></input>
+ <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
+ <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;www.flexdecks.com' > </input>
+<!-- Do not remove this code. -->
+<style>
+html,body{
+margin: 0px;
+}
+#crmWebToEntityForm.zcwf_lblLeft {
+width:100%;
+padding: 25px;
+margin: 0 auto;
+box-sizing: border-box;
+}
+#crmWebToEntityForm.zcwf_lblLeft * {
+box-sizing: border-box;
+}
+#crmWebToEntityForm{text-align: left;}
+#crmWebToEntityForm * {
+direction: ltr;
+}
+.zcwf_lblLeft .zcwf_title {
+word-wrap: break-word;
+padding: 0px 6px 10px;
+font-weight: bold;
+}
+.zcwf_lblLeft .zcwf_col_fld input[type=text], .zcwf_lblLeft .zcwf_col_fld textarea {
+    width: 100%;
+    border: 1px solid #ccc!important;
+    resize: vertical;
+    border-radius: 0;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.zcwf_lblLeft .zcwf_col_lab {
+    word-break: break-word;
+    padding: 0px 6px 0px;
+    margin-right: 10px;
+    margin-top: 5px;
+    min-height: 1px;
+}
+.zcwf_lblLeft .zcwf_col_fld {
+    padding: 0px 6px 0px;
+    position: relative;
+    margin-top: 5px;
+}
+.zcwf_lblLeft .zcwf_privacy{padding: 6px;}
+.zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
+.dIB{display: inline-block;}
+.zcwf_lblLeft .zcwf_col_fld_slt {
+width: 60%;
+border: 1px solid #ccc;
+background: #fff;
+border-radius: 4px;
+font-size: 14px;
+float: left;
+resize: vertical;
+}
+.zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after {
+content: '';
+display: table;
+clear: both;
+}
+.zcwf_lblLeft .zcwf_col_help {
+float: left;
+margin-left: 7px;
+font-size: 14px;
+max-width: 35%;
+word-break: break-word;
+display: none;
+}
+.zcwf_lblLeft .zcwf_help_icon {
+cursor: pointer;
+width: 16px;
+height: 16px;
+display: inline-block;
+background: #fff;
+border: 1px solid #ccc;
+color: #ccc;
+text-align: center;
+font-size: 11px;
+line-height: 16px;
+font-weight: bold;
+border-radius: 50%;
+}
+.zcwf_lblLeft .zcwf_row {margin: 10px 0px;}
+.zcwf_lblLeft .formsubmit {
+margin-right: 5px;
+cursor: pointer;
+color: #333;
+font-size: 14px;
+}
+.zcwf_lblLeft .zcwf_privacy_txt {
+color: rgb(0, 0, 0);
+font-size: 14px;
+font-family: Calibri;
+display: inline-block;
+vertical-align: top;
+color: #333;
+padding-top: 2px;
+margin-left: 6px;
+}
+.zcwf_lblLeft .zcwf_button {
+font-size: 14px;
+color: #333;
+border: 1px solid #ccc;
+padding: 3px 9px;
+border-radius: 4px;
+cursor: pointer;
+max-width: 150px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.zcwf_lblLeft .zcwf_tooltip_over{
+position: relative;
+}
+.zcwf_lblLeft .zcwf_tooltip_ctn{
+position: absolute;
+background: #dedede;
+padding: 3px 6px;
+top: 3px;
+border-radius: 4px;word-break: break-all;
+min-width: 50px;
+max-width: 150px;
+color: #333;
+}
+.zcwf_lblLeft .zcwf_ckbox{
+float: left;
+}
+.zcwf_lblLeft .zcwf_file{
+width: 55%;
+box-sizing: border-box;
+float: left;
+}
+.clearB:after{
+content:'';
+display: block;
+clear: both;
+}
+
+.zcwf_lblLeft .zcwf_col_lab {
+        font-size: 18px;
+        font-weight: 500;        
+        display: inline-block;
+    }
+
+
+@media all and (max-width: 600px) {
+.zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
+width: auto;
+float: none !important;
+}
+.zcwf_lblLeft .zcwf_col_help {width: 40%;}
+}
+
+.zcwf-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.zcwf-container .zcwf_row {
+    width: 100%;
+}
+
+@media all and (min-width: 990px) {
+.zcwf-container .zcwf_row {
+    flex: 1 0 50%;
+    max-width: 50%;
+    padding: 0 10px;
+}
+
+.zcwf_100 {
+    width: 100%;
+    flex: 1 0 100%!important;
+    max-width: 100%!important;
+}
+
+
+}
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+}
+
+</style>
+<div class='zcwf_title' style='max-width: 600px;color: black;display:none;'>Schedule Site Visit</div>
+<div class="zcwf-container">
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Company'>Company<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Company' name='Company' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='First_Name'>First Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Designation'>Title</label></div><div class='zcwf_col_fld'><input type='text' id='Designation' name='Designation' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Phone'>Phone<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Email'>Email<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Street'>Street</label></div><div class='zcwf_col_fld'><input type='text' id='Street' name='Street' maxlength='250'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='City'>City</label></div><div class='zcwf_col_fld'><input type='text' id='City' name='City' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='State'>State</label></div><div class='zcwf_col_fld'><input type='text' id='State' name='State' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Zip_Code'>Zip Code</label></div><div class='zcwf_col_fld'><input type='text' id='Zip_Code' name='Zip Code' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Secondary_Email'>Preferred Contact Date</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Secondary_Email' name='Secondary Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' >Upload Related Project Image</div>
+<div class='zcwf_col_fld'><div class='clearB'><input type='file' class='zcwf_file' name='theFile' id='theFile4805080000002819028' multiple /><div class='zcwf_col_help' style="display: none;"><span title='Please provide and image of the area of concern if possible' style='cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #ccc; color: #ccc; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%;' onclick='tooltipShow4805080000002819028(this)'>?</span><div class='zcwf_tooltip_over' style='display: none;'><span class='zcwf_tooltip_ctn'>null</span></div></div></div><p style='color:black;font-size:11px;padding-left:3px;'>File(s) size limit is 20MB.</p>
+</div></div>
+<div class='zcwf_row zcwf_100'><div class='zcwf_col_lab' ><label for='Description'>Tell Us About Your Project</label></div><div class='zcwf_col_fld'><textarea id='Description' name='Description' rows='4'></textarea><div class='zcwf_col_help'> <span title='Please provide a description of your safe access concerns' style='cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #ccc; color: #ccc; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%;' onclick='tooltipShow4805080000002819028(this)'>?</span><div class='zcwf_tooltip_over' style='display: none;'><span class='zcwf_tooltip_ctn'>Please provide a description of your safe access concerns</span></div></div></div></div>
+<div class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' ><label for='Lead_Source'>Lead Source</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'  >
+<option value='-None-'>-None-</option>
+<option value='Chat'>Chat</option>
+<option value='Cold&#x20;Call'>Cold Call</option>
+<option value='Email&#x20;Campaign'>Email Campaign</option>
+<option value='Employee&#x20;Referral'>Employee Referral</option>
+<option value='Facebook'>Facebook</option>
+<option value='Federal&#x20;Compass'>Federal Compass</option>
+<option value='Google&#x20;Ad'>Google Ad</option>
+<option selected value='Inspection&#x20;Landing&#x20;Page'>Inspection Landing Page</option>
+<option value='Kee&#x20;Safety&#x20;Partner'>Kee Safety Partner</option>
+<option value='Linkedin'>Linkedin</option>
+<option value='Referral'>Referral</option>
+<option value='Research'>Research</option>
+<option value='Source&#x20;List'>Source List</option>
+<option value='Trade&#x20;Show'>Trade Show</option>
+<option value='Twitter'>Twitter</option>
+<option value='Web&#x20;Form&#x20;Contact&#x20;Us'>Web Form Contact Us</option>
+</select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row zcwf_100'><div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LfaXscaAAAAALOPlqP93nxWmQbFBIjTbXG3wuIC' data-theme='light' data-callback='rccallback4805080000002819028' captcha-verified='false' id='recap4805080000002819028'></div><div  id='recapErr4805080000002819028' style='font-size:12px;color:red;visibility:hidden;'>Captcha validation failed. If you are not a robot then please try again.</div></div></div><div class='zcwf_row zcwf_100'><div class='zcwf_col_fld' style="text-align: center;"><input type='submit' id='formsubmit' class='formsubmit zcwf_button s-btn s-normal' value='Submit' title='Submit' style=" border-radius: 0;"></div></div></div>
+<script>
+
+  /* Do not remove this code. */
+  function rccallback4805080000002819028()
+{
+if(document.getElementById('recap4805080000002819028')!=undefined){
+document.getElementById('recap4805080000002819028').setAttribute('captcha-verified',true);
+}
+if(document.getElementById('recapErr4805080000002819028')!=undefined && document.getElementById('recapErr4805080000002819028').style.visibility == 'visible' ){
+document.getElementById('recapErr4805080000002819028').style.visibility='hidden';
+}
+}
+function reCaptchaAlert4805080000002819028()
+{
+var recap = document.getElementById('recap4805080000002819028');
+if( recap !=undefined && recap.getAttribute('captcha-verified') == 'false')
+{
+document.getElementById('recapErr4805080000002819028').style.visibility='visible';
+return false;
+}
+return true;
+}
+function validateEmail4805080000002819028()
+{
+var form = document.forms['WebToLeads4805080000002819028'];
+var emailFld = form.querySelectorAll('[ftype=email]');
+var i;
+for (i = 0; i < emailFld.length; i++)
+{
+var emailVal = emailFld[i].value;
+if((emailVal.replace(/^\s+|\s+$/g, '')).length!=0 )
+{
+var atpos=emailVal.indexOf('@');
+var dotpos=emailVal.lastIndexOf('.');
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)
+{
+alert('Please enter a valid email address. ');
+emailFld[i].focus();
+return false;
+}
+}
+}
+return true;
+}
+
+   function checkMandatory4805080000002819028() {
+var mndFileds = new Array('Company','First Name','Last Name','Email','Phone');
+var fldLangVal = new Array('Company','First\x20Name','Last\x20Name','Email','Phone');
+for(i=0;i<mndFileds.length;i++) {
+ var fieldObj=document.forms['WebToLeads4805080000002819028'][mndFileds[i]];
+ if(fieldObj) {
+if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+if(fieldObj.type =='file')
+{ 
+alert('Please select a file to upload.'); 
+fieldObj.focus(); 
+return false;
+} 
+alert(fldLangVal[i] +' cannot be empty.'); 
+         fieldObj.focus();
+         return false;
+}  else if(fieldObj.nodeName=='SELECT') {
+      if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+alert(fldLangVal[i] +' cannot be none.'); 
+fieldObj.focus();
+return false;
+  }
+} else if(fieldObj.type =='checkbox'){
+  if(fieldObj.checked == false){
+alert('Please accept  '+fldLangVal[i]);
+fieldObj.focus();
+return false;
+  } 
+} 
+try {
+    if(fieldObj.name == 'Last Name') {
+name = fieldObj.value;
+     }
+} catch (e) {}
+   }
+}
+if(!validateFileUpload4805080000002819028()){return false;}
+
+if(!validateEmail4805080000002819028()){return false;}
+if(!reCaptchaAlert4805080000002819028()){return false;}
+document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+}
+
+function validateFileUpload4805080000002819028(){
+var uploadedFiles = document.getElementById('theFile4805080000002819028'); 
+var totalFileSize =0; 
+if(uploadedFiles.files.length >3){ 
+alert('You can upload a maximum of three files at a time.'); 
+return false; 
+} 
+if ('files' in uploadedFiles) { 
+if (uploadedFiles.files.length != 0) { 
+for (var i = 0; i < uploadedFiles.files.length; i++) { 
+var file = uploadedFiles.files[i]; 
+if ('size' in file) { 
+totalFileSize = totalFileSize + file.size; 
+} 
+} 
+if(totalFileSize > 20971520){ 
+alert('Total file(s) size should not exceed 20MB.'); 
+return false; 
+} 
+} 
+} 
+return true; 
+}
+function tooltipShow4805080000002819028(el){
+var tooltip = el.nextElementSibling;
+var tooltipDisplay = tooltip.style.display;
+if(tooltipDisplay == 'none'){
+var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+for(i=0; i<allTooltip.length; i++){
+allTooltip[i].style.display='none';
+}
+tooltip.style.display = 'block';
+}else{
+tooltip.style.display='none';
+}
+}
+</script>
+<script type="text/javascript">
+    window.addEventListener('load', function() {
+        
+        var node = document.createElement("script");
+        node.src = 'https://www.google.com/recaptcha/api.js';
+        node.type = "text/javascript";
+        node.id = "recaptcha_js";
+        document.getElementsByTagName('HEAD')[0].appendChild(node);
+
+        node = document.createElement("script");
+        node.src = 'https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=6f017a7e93acf78ff892d147c52f3a1df3276daafc6826088aa23c749a85f027gid3dd075b2ab7a579bc9febfdb0d5acfc42a540e22ad64e3675afda1b0e7b6d786gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513';
+        node.type = "text/javascript";
+        node.id = "wf_anal";
+        document.getElementsByTagName('HEAD')[0].appendChild(node);
+        
+    });
+</script>
+</form>
+</div>
+<?php
+    $content = ob_get_contents();
+    ob_end_clean();
+
+    return $content;
+}

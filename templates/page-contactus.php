@@ -35,14 +35,14 @@ get_header();
                             <div class="column">
                             <div class="content">
                                 <?php echo $left; ?>
-                        </div>
+                            </div>
                             </div>
                         <?php endif; ?>
-                         <?php if ($right): ?>
+                        <?php if ($right): ?>
                             <div class="column">
                             <div class="content">
                                 <?php echo $right; ?>
-                         </div>
+                            </div>
                             </div>
                         <?php endif; ?>
                     </div>
