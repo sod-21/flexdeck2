@@ -541,7 +541,7 @@ float: none !important;
 <option selected value='Web&#x20;Form&#x20;Contact&#x20;Us'>Web Form Contact Us</option>
 </select><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab'  ><label for='Email'>Email<span >*</span></label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
-<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Description'>Your Question<span >*</span></label></div><div class='zcwf_col_fld'><textarea id='Description' name='Description'></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'> <div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LfaXscaAAAAALOPlqP93nxWmQbFBIjTbXG3wuIC' data-theme='light' data-callback='rccallback4805080000000479003' captcha-verified='false' id='recap4805080000000479003'></div><div  id='recapErr4805080000000479003' style='font-size:12px;color:red;visibility:hidden;'>Captcha validation failed. If you are not a robot then please try again.</div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button s-btn s-normal' value='Submit' title='Submit'><input type='reset' class='zcwf_button s-btn s-normal' name='reset' value='Reset' title='Reset'></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Description'>Your Question<span >*</span></label></div><div class='zcwf_col_fld'><textarea id='Description' name='Description' rows="4"></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'> <div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LfaXscaAAAAALOPlqP93nxWmQbFBIjTbXG3wuIC' data-theme='light' data-callback='rccallback4805080000000479003' captcha-verified='false' id='recap4805080000000479003'></div><div  id='recapErr4805080000000479003' style='font-size:12px;color:red;visibility:hidden;'>Captcha validation failed. If you are not a robot then please try again.</div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button s-btn s-normal' value='Submit' title='Submit'><input type='reset' class='zcwf_button s-btn s-normal' name='reset' value='Reset' title='Reset'></div></div>
 <script>
 
   /* Do not remove this code. */
@@ -676,6 +676,7 @@ function zoho_form_func_4() {
         'form_title' => '',
         'form_description' => '',
     ), $atts );
+$page_url = get_permalink();
 
     ob_start();
 ?>
@@ -684,16 +685,25 @@ function zoho_form_func_4() {
    - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code.
    - The Mandatory check script can modified as to suit your business needs.
    - It is important that you test the modified form before going live.-->
-   <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 900px;'>
+   <div class="crmresponse" style="display: none; font-size: 20px;">Your request has been received. We'll reach out soon!</div>
+   <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style=' max-width: 900px;'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>   
+   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
+   <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads4805080000002819028 method='POST' enctype='multipart/form-data' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4805080000002819028()' accept-charset='UTF-8'>
  <input type='text' style='display:none;' name='xnQsjsdp' value='3dd075b2ab7a579bc9febfdb0d5acfc42a540e22ad64e3675afda1b0e7b6d786'></input>
  <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
  <input type='text' style='display:none;' name='xmIwtLD' value='6f017a7e93acf78ff892d147c52f3a1df3276daafc6826088aa23c749a85f027'></input>
  <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
- <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;www.flexdecks.com' > </input>
+ <input type='text' style='display:none;' name='returnURL' value='<?php echo $page_url; ?>#success' > </input>
 <!-- Do not remove this code. -->
+<script type="text/javascript">
+    if (window.location.hash == "#success") {
+        document.querySelector(".crmresponse").style.display = "block";
+        document.getElementById("crmWebToEntityForm").style.display = "none";
+        window.location.hash = "";
+    }    
+</script>
 <style>
 html,body{
 margin: 0px;
@@ -879,7 +889,7 @@ float: none !important;
 }
 
 </style>
-<div class='zcwf_title' style='max-width: 600px;color: black;display:none;'>Schedule Site Visit</div>
+<div class='zcwf_title' style='max-width: 600px;color: black;display: none;'>Schedule Site Visit</div>
 <div class="zcwf-container">
 <div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Company'>Company<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Company' name='Company' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div>
@@ -891,11 +901,11 @@ float: none !important;
 <div class='zcwf_row'><div class='zcwf_col_lab' ><label for='City'>City</label></div><div class='zcwf_col_fld'><input type='text' id='City' name='City' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab' ><label for='State'>State</label></div><div class='zcwf_col_fld'><input type='text' id='State' name='State' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Zip_Code'>Zip Code</label></div><div class='zcwf_col_fld'><input type='text' id='Zip_Code' name='Zip Code' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
-<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='Secondary_Email'>Preferred Contact Date</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Secondary_Email' name='Secondary Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row'><div class='zcwf_col_lab' ><label for='LEADCF81'>Preferred Contact Date</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF81' name='LEADCF81' maxlength='20' ftype='date' placeholder='MMM D, YYYY' tplid='4805080000002819028LEADCF81' onfocus='formCalender.stEv(event);formCalender.createCalendar(this);' autocomplete='off'></input><div id='template4805080000002819028LEADCF81'  onclick='formCalender.stEv(event);'  class='tempCalDiv'></div><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab' >Upload Related Project Image</div>
-<div class='zcwf_col_fld'><div class='clearB'><input type='file' class='zcwf_file' name='theFile' id='theFile4805080000002819028' multiple /><div class='zcwf_col_help' style="display: none;"><span title='Please provide and image of the area of concern if possible' style='cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #ccc; color: #ccc; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%;' onclick='tooltipShow4805080000002819028(this)'>?</span><div class='zcwf_tooltip_over' style='display: none;'><span class='zcwf_tooltip_ctn'>null</span></div></div></div><p style='color:black;font-size:11px;padding-left:3px;'>File(s) size limit is 20MB.</p>
+<div class='zcwf_col_fld'><div class='clearB'><input type='file' class='zcwf_file' name='theFile' id='theFile4805080000002819028' multiple /><div class='zcwf_col_help'><span title='Please provide and image of the area of concern if possible' style='cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #ccc; color: #ccc; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%;' onclick='tooltipShow4805080000002819028(this)'>?</span><div class='zcwf_tooltip_over' style='display: none;'><span class='zcwf_tooltip_ctn'>null</span></div></div></div><p style='color:black;font-size:11px;padding-left:3px;'>File(s) size limit is 20MB.</p>
 </div></div>
-<div class='zcwf_row zcwf_100'><div class='zcwf_col_lab' ><label for='Description'>Tell Us About Your Project</label></div><div class='zcwf_col_fld'><textarea id='Description' name='Description' rows='4'></textarea><div class='zcwf_col_help'> <span title='Please provide a description of your safe access concerns' style='cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #ccc; color: #ccc; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%;' onclick='tooltipShow4805080000002819028(this)'>?</span><div class='zcwf_tooltip_over' style='display: none;'><span class='zcwf_tooltip_ctn'>Please provide a description of your safe access concerns</span></div></div></div></div>
+<div class='zcwf_row zcwf_100'><div class='zcwf_col_lab' ><label for='Description'>Tell Us About Your Project</label></div><div class='zcwf_col_fld'><textarea id='Description' name='Description' rows="4"></textarea><div class='zcwf_col_help'> <span title='Please provide a description of your safe access concerns' style='cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #ccc; color: #ccc; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%;' onclick='tooltipShow4805080000002819028(this)'>?</span><div class='zcwf_tooltip_over' style='display: none;'><span class='zcwf_tooltip_ctn'>Please provide a description of your safe access concerns</span></div></div></div></div>
 <div class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' ><label for='Lead_Source'>Lead Source</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'  >
 <option value='-None-'>-None-</option>
 <option value='Chat'>Chat</option>
@@ -914,7 +924,44 @@ float: none !important;
 <option value='Trade&#x20;Show'>Trade Show</option>
 <option value='Twitter'>Twitter</option>
 <option value='Web&#x20;Form&#x20;Contact&#x20;Us'>Web Form Contact Us</option>
-</select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row zcwf_100'><div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LfaXscaAAAAALOPlqP93nxWmQbFBIjTbXG3wuIC' data-theme='light' data-callback='rccallback4805080000002819028' captcha-verified='false' id='recap4805080000002819028'></div><div  id='recapErr4805080000002819028' style='font-size:12px;color:red;visibility:hidden;'>Captcha validation failed. If you are not a robot then please try again.</div></div></div><div class='zcwf_row zcwf_100'><div class='zcwf_col_fld' style="text-align: center;"><input type='submit' id='formsubmit' class='formsubmit zcwf_button s-btn s-normal' value='Submit' title='Submit' style=" border-radius: 0;"></div></div></div>
+</select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row zcwf_100'> <div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LfaXscaAAAAALOPlqP93nxWmQbFBIjTbXG3wuIC' data-theme='light' data-callback='rccallback4805080000002819028' captcha-verified='false' id='recap4805080000002819028'></div><div  id='recapErr4805080000002819028' style='font-size:12px;color:red;visibility:hidden;'>Captcha validation failed. If you are not a robot then please try again.</div></div></div><div class='zcwf_row zcwf_100'> <div class='zcwf_col_fld'  style="text-align: center;">
+    <input type='submit' id='formsubmit'  style=" border-radius: 0;" class='formsubmit zcwf_button  s-btn s-normal' value='Submit' title='Submit'>
+    <!-- <input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'> -->
+</div></div>
+</div>
+<script type='text/javascript'>var formCalender={userPattern:'YYYY-MM-DD',currDateObj:void 0,currMonth:void 0,currYear:void 0,currDate:void 0,currMonthEnd:[31,28,31,30,31,30,31,31,30,31,30,31],monthName:void 0,days:void 0,displayPanel:void 0,isHideToday:void 0,calDefColor:'#515CCB',weekdays:{1:'Sunday',2:'Monday',3:'Tuesday',4:'Wednesday',5:'Thursday',6:'Friday',7:'Saturday'},months:{1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'},init:function(){this.monthName=[{html:'January',value:0},{html:'February',value:1},{html:'March',value:2},{html:'April',value:3},{html:'May',value:4},{html:'June',value:5},{html:'July',value:6},{html:'August',value:7},{html:'September',value:8},{html:'October',value:9},{html:'November',value:10},{html:'December',value:11}],this.days=['ssunday','smonday','stuesday','swednesday','sthursday','sfriday','ssaturday'],this.dayNamesShort=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],this.daysBasedOnPrefernce=['ssunday','smonday','stuesday','swednesday','sthursday','sfriday','ssaturday'];var e=this.daysBasedOnPrefernce[0];this.daysBasedOnPrefernce.shift(1),this.daysBasedOnPrefernce.push(e);var t=this.dayNamesShort[0];this.dayNamesShort.shift(1),this.dayNamesShort.push(t),this.currDateObj=new Date,this.currMonth=this.currDateObj.getMonth(),this.currYear=this.currDateObj.getFullYear(),this.currYear<1e3&&(this.currYear+=1900),this.currDate=this.currDateObj.getDate()},getTitle:function(){return this.monthName[this.currMonth].html+' '+this.currYear},createCalendar:function(e){for(var t=document.getElementsByClassName('tempCalDiv'),a=t.length,r=0;r<a;r++){var n=t[r].style;'block'===n.display&&(n.display='none')}this.calendarNode=e,this.userPattern=this.calendarNode.placeholder;var s=this.calendarNode.value,i=!1;if(s){var l=dateFormatConvert.validate(s,this.userPattern);l&&(this.currDate=l.getDate(),this.currMonth=l.getMonth(),this.currYear=l.getFullYear(),this.currYear<1e3&&(this.currYear=Number(this.currYear)+1900))}else i=!0,formCalender.init();this.monthName||formCalender.init(),this.createDatePicker(this.currDate,this.currMonth,this.currYear,i,!1)},createDatePicker:function(e,t,a,r,n){1===this.currMonth&&(this.currMonthEnd[1]=this.currYear%400==0||this.currYear%4==0&&this.currYear%100!=0?29:28);var s=new Date(a,t,1),i=6,l=this.daysBasedOnPrefernce.indexOf(this.days[s.getDay()])+1;i=31===this.currMonthEnd[t]&&l>=6||30===this.currMonthEnd[t]&&7===l?7:28===this.currMonthEnd[t]&&1===l?5:6;var d=this.getTitle(e,a,t),o=this.dayNamesShort,h='<div id=\'calenDiv\'><i id=\'calArrow\' style=\'display:none;\' class=\'dIB SocialArrow\'></i><div><div>';h+='<div class=\'txt-ctr\'><span class=\'calNav dIB vam yearNavLft\' onclick=\'formCalender.updateDatePicker(event,undefined, -1)\'><i class=\'arrow left mRMinus2\'></i><i class=\'arrow left\'></i></span><span class=\'calNav dLft dIB vam\' onClick=\'formCalender.updateDatePicker(event,-1)\' id=\'pm\'><i class=\'arrow left\'></i></span><span class=\'sCalMon\'>'+d+'</span><span class=\'calNav dRgt vam\' onClick =\'formCalender.updateDatePicker(event,1)\' id=\'nm\'><i class=\'arrow right\'></i></span><span class=\'calNav dIB vam yearNavRgt\' onclick=\'formCalender.updateDatePicker(event,undefined, 1)\'><i class=\'arrow right\'></i><i class=\'arrow right mLMinus2\'></i></span></div>',h+='<table  class=\'calDay\'  id =\'weekDays\' style=\'color:#868686; font-size:8px; margin-left:0\'><tr> <th>'+o[0]+'</th> <th>'+o[1]+'</th><th>'+o[2]+'</th><th>'+o[3]+'</th> <th>'+o[4]+'</th> <th>'+o[5]+'</th> <th>'+o[6]+'</th></tr></table>',h+='</div>',h+='<table id=\'calHeader\' class=\'calDay\' style=\'margin-left:0; margin-top:-5px;\' width=\'100%\' cellspacing=\'0\' cellpadding=\'0\' border=\'0\' >';var c='',u=new Date,y=a||u.getFullYear(),v=e||u.getDate(),g=void 0===t?u.getMonth():t,m=u.getMonth(),p=u.getFullYear();u.getDate();m===t&&a===p&&(c=' style=\'display:none\'');for(var f,D,M,b=s.getDay();1!==b;)s.setDate(s.getDate()-1),b=s.getDay();for(var x=1;x<=i;x++){h+='<tr>';for(var Y=1;Y<8;Y++){f=s.getMonth(),D=s.getFullYear(),M=s.getDate(),D+'-'+(parseInt(f)+1)+'-'+M;var F='cdate lt-gray';if(M===v&&D===y&&f===g&&(F='cdate lt-gray'),f===g&&(F='cdate'),(r&&M===v&&m===g&&p===y||!n&&M===v&&f===g&&D===y)&&(F='sel'),n){var k=dateFormatConvert.validate(this.calendarNode.value,formCalender.userPattern);k&&M===k.getDate()&&f===k.getMonth()&&D===k.getFullYear()&&(F='sel')}h+='<td class=\''+F+'\' onClick=\'formCalender.displaySelectedDate(\"'+M+' '+f+' '+D+'\")\'>'+M+'</td>',s.setDate(s.getDate()+1)}h+='</tr>'}h+='</table>',h+='<div>',this.isHideToday||(h+='<div id=\'calBtns\' class=\'pT15 pB15 fL\'><a'+c+' class=\'cP fL\' href=\'javascript:;\' id=\'todayBtn\' onclick=\'formCalender.displaySelectedDate(\"today\")\'>Today</a>'),h+='</div>',h+='</div>',h+='</div></div>';var C=document.getElementById('template'+this.calendarNode.getAttribute('tplid'));C.innerHTML=h,C.style.display='block'},displaySelectedDate:function(e,t){if(!t)t=this.calendarNode;if('today'===e){var a=new Date;e=a.getDate()+' '+a.getMonth()+' '+a.getFullYear()}e=e.split(' ');var r=dateFormatConvert.convertFormat(new Date(e[2],e[1],e[0]),this.userPattern);t.value=r,t.focus(),t.placeholder=this.userPattern,formCalender.closeDatePicker(),t.addEventListener('keyup',function(e){formCalender.calendarNode=this;var t=this.value,a=dateFormatConvert.validate(t,formCalender.userPattern);if(a){var r={};r.date=a.getDate(),r.month=a.getMonth(),r.year=a.getFullYear(),formCalender.updateDatePicker(e,void 0,void 0,r)}}),t.blur()},closeDatePicker:function(){document.getElementById('template'+this.calendarNode.getAttribute('tplid')).style.display='none'},updateDatePicker:function(e,t,a,r){var n=document.getElementById('template'+this.calendarNode.getAttribute('tplid'));r&&(this.currDate=r.date,this.currMonth=r.month,this.currYear=r.year),void 0!==t?1===t?11===this.currMonth?(this.currMonth=0,this.currYear++):this.currMonth++:0===this.currMonth?(this.currMonth=11,this.currYear--):this.currMonth--:void 0!==a&&(this.currYear=parseInt(this.currYear)+a),this.createDatePicker(this.currDate,this.currMonth,this.currYear,!1,!0),n.style.display='block'},stEv:function(e){e||(e=window.event),e&&(e.cancelBubble=!0,e.stopPropagation&&e.stopPropagation())}};window.onclick=function(){for(var e=document.getElementsByClassName('tempCalDiv'),t=e.length,a=0;a<t;a++){var r=e[a];if(document.activeElement===document.querySelector('input[tplid=\''+r.id.replace('template','')+'\']'))return;var n=e[a].style;'block'===n.display&&(n.display='none')}};var dateFormatConvert={shortMon:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],longMon:['January','February','March','April','May','June','July','August','September','October','November','December'],dayArr:[31,28,31,30,31,30,31,31,30,31,30,31],wod:1,lm:'userdate',_dateObj:void 0,lLimit:80,formats:[{val:'YYYY',type:'year',regex:/\d{4}/,len:4},{val:'GGGG',type:'year',regex:/\d{4}/,len:4,isWEG:!0},{val:'gggg',type:'year',regex:/\d{4}/,len:4,isWEG:!0},{val:'YY',type:'year',regex:/\d{2}/,len:2},{val:'GG',type:'year',regex:/\d{2}/,len:2,isWEG:!0},{val:'gg',type:'year',regex:/\d{2}/,len:2,isWEG:!0},{val:'MMMM',type:'month',regex:/[A-z]{3,}/,long:!0,str:!0,array:['January','February','March','April','May','June','July','August','September','October','November','December']},{val:'MMM',str:!0,type:'month',regex:/[A-z]{3,}/,array:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']},{val:'Mo',suff:!0,type:'month',regex:/\d{1,2}(?=st|nd|rd|th)/,max:12},{val:'MM',type:'month',regex:/\d{2}/,len:2,max:12,alt:!0},{val:'M',type:'month',regex:/\d{1,2}/,max:12},{val:'DDDD',type:'date',regex:/\d{3}/,len:3,year:!0},{val:'DDDo',type:'date',suff:!0,regex:/\d{1,3}(?=st|nd|rd|th)/,len:3,year:!0,ignore:/\d{3}(?=st|nd|rd|th)/},{val:'DDD',type:'date',regex:/\d{1,3}/,year:!0,ignore:/\d{3}/},{val:'Do',type:'date',suff:!0,regex:/\d{1,2}(?=st|nd|rd|th)/},{val:'DD',type:'date',regex:/\d{2}/,len:2,alt:!0},{val:'D',type:'date',regex:/\d{1,2}/},{val:'dddd',type:'longdate',regex:/[A-z]{3,}/,long:!0,str:!0,array:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']},{val:'ddd',type:'longdate',regex:/[A-z]{3}/,str:!0,array:['Sun','Mon','Tue','Wed','Thu','Fri','Sat']},{val:'dd',type:'longdate',regex:/[A-z]{2}/,str:!0,array:['Su','Mo','Tu','We','Th','Fr','Sa']},{val:'do',type:'longdate',regex:/\d{1}(?=st|nd|rd|th)/,suff:!0},{val:'d',type:'longdate',regex:/\d{1}/}],parseFormat:function(e,t){for(var a,r=this.formats,n=[],s=r.length,i=0;i<s;i++){var l=r[i];if(!e.length)break;if(e.indexOf(l.val)>-1){if(t&&l.alt){a=!0;continue}a&&(l.val=r[i-1].val,l=r[i-1]),a=!1,n.push({format:l,index:e.indexOf(l.val)}),e=e.replace(l.val,Math.pow(10,l.val.length-1)),i--}else;}return n.sort(function(e,t){return e.index-t.index})},convertFormat:function(e,t){this._dateObj=e;var a=this._dateObj,r=this.parseFormat(t,!0),n={},s={date:a.getDate(),month:a.getMonth(),year:a.getFullYear(),day:a.getDay()};t=this.fmReplace(t.replace(/{{|}}/g,''),r);for(var i=r.length,l=0;l<i;l++){var d=r[l].format;switch(d.type){case'date':t=t.replace(d.val+this.lm,this.crctLength(d.year?this.totdate(s.month,this.isLeap(s.year),s.date):s.date,d.len,d.suff));break;case'month':t=d.str?t.replace(d.val+this.lm,d.array[s.month]):t.replace(d.val+this.lm,this.crctLength(s.month+1,d.len,d.suff));break;case'year':t=t.replace(d.val+this.lm,2===d.len?this.crctLength(s.year%100,2):4===(s.year+'').length?s.year:this.crctLength(s.year,4)),n.year=n.year||[],n.year.push(d);break;case'day':case'week':n.flag=!0,n[d.type]=n[d.type]||[],n[d.type].push(d);break;case'longdate':t=d.str?t.replace(d.val+this.lm,d.array[s.day]):t.replace(d.val+this.lm,this.crctLength(s.day,null,d.suff))}}return t.replace(/{{|}}/g,'')},fmReplace:function(e,t){for(var a=0,r=t.length,n=0;n<r;n++)e=e.slice(0,t[n].index+a)+t[n].format.val+this.lm+e.slice(t[n].index+a+t[n].format.val.length),a+=8;return e},totdate:function(e,t,a){for(var r=0,n=0;n<e;n++)r+=this.dayArr[n],t&&1===n&&(r+=1);return r+(a||0)},crctLength:function(e,t,a){var r='';if(a&&(r=this.nthconv(e)),t){e=e.toString();for(var n=1;n<t;n++)e.length<=n&&(e='0'+e)}return e+r},nthconv:function(e){if(e>3&&e<21)return'th';switch(e%10){case 1:return'st';case 2:return'nd';case 3:return'rd';default:return'th'}},isLeap:function(e){return 2===(e+='').length&&(e=this.getCorrectYear(parseInt(e))),(e=parseInt(e))%4==0&&e%100!=0||e%400==0},getCorrectYear:function(e){var t=e+'';if(e=parseInt(e),2===t.length){var a=(new Date).getFullYear(),r=parseInt(a/100),n=a%100,s=(n-this.lLimit+100)%100;e=n>s?e<s?r+1+''+this.crctLength(e,2):r+''+this.crctLength(e,2):e<s?r+''+this.crctLength(e,2):r-1+''+this.crctLength(e,2)}return e},valFormat:function(e,t){for(var a={},r=new Date((new Date).getFullYear(),0),n=this.parseFormat(t,!0),s=e,i=t=t.replace(/{{|}}/g,''),l=n.length,d=0;d<l;d++){var o,h=n[d].format;switch(h.type){case'date':case'year':case'week':case'day':h.regex.test(e)?(o='year'===h.type?e.match(h.regex)[h.match||0]:parseInt(e.match(h.regex)[h.match||0]),a[h.type]=o,e=this.replaceVal(e,h.regex,h.suff),s=this.replaceVal(s,h.regex,h.suff,h.val),h.year&&(a.date=getDay(a.date).day)):a.year&&a.week?(a[h.type]=this.wod,t=t.replace(h.val,''),i=i.replace(h.val,'')):a[h.type]='Invalid',/date/i.test(h.type)&&0===a[h.type]&&(a[h.type]='Invalid');break;case'month':h.regex.test(e)?(o=this.getMonth(e.match(h.regex)[0],h.suff,h.str,h.long),a.month=o.val,e=this.replaceVal(e,o.mon||h.regex,h.suff),s=this.replaceVal(s,o.mon||h.regex,h.suff,h.val)):a.month='Invalid',a.month<0&&(a.month='Invalid');break;case'longdate':h.regex.test(e)&&(o=h.str?this.findVal(h.array,e.match(h.regex)[0]):parseInt(e.match(h.regex)[0]),a.longdate=this.isDef(o.index)?o.index:o,e=this.replaceVal(e,o.mon||o,h.suff),s=this.replaceVal(s,o.mon||o,h.suff,h.val))}t=t.replace(h.valForm||h.val,'')}if(this.isDef(a.longdate)&&a.day&&a.day!==a.longdate?r.setFullYear('Invalid'):this.isDef(a.year)&&r.setFullYear(this.getCorrectYear(a.year)),this.isDef(a.month)&&r.setMonth(a.month),this.isDef(a.date)&&r.setDate(a.date<=this.dayArr[r.getMonth()]+(1===r.getMonth()&&this.isLeap(r.getFullYear())?1:0)?a.date:'Invalid'),this._isCorrectFormat=e.length===t.length&&i===s&&this.validate(r))return r},validate:function(e,t){var a=e.constructor;if(a===Date)return this._dateObj=e,'Invalid Date'!==e.toString();if(a===String&&t){var r=this.valFormat(e,t);return r&&this._isCorrectFormat&&(this._format=t),r}},replaceVal:function(e,t,a,r){return e=e.replace(t,r||''),a&&(e=e.replace(/st|nd|rd|th/,'')),e},getMonth:function(e,t,a,r){var n;if(a){var s=this.findVal(r?this.longMon:this.shortMon,e);n=s.mon,e=s.index,(!n||e>11)&&(e='Invalid')}else(e=parseInt(e)-1)>11&&(e='Invalid');return{val:e,mon:n}},findVal:function(e,t){var a,r,n=e.length;for(r=0;r<n;r++)if(new RegExp(e[r]).test(t)){a=e[r];break}return{mon:a,index:r}},isDef:function(e){return void 0!==e}};</script>
+<style>
+#calenDiv{padding:10px;display:table; width: 195px;font-family: helvetica,sans-serif !important;}
+.calNav{width:20px; height:15px; display:inline-block;position:relative; top:4px; cursor:pointer}
+#calenDiv .calNav {width:15px;}
+#calenDiv .yearNavLft {right:10px;}
+#calenDiv .yearNavRgt {left:10px;}
+#calenDiv .dLft {right:5px; }
+#calenDiv .dRgt {left:5px;}
+.dLft{right:10px;opacity:0.8; }
+.dRgt{left:10px;opacity:0.8;}
+.yearNavLft{right:15px; }
+.yearNavRgt{left:15px;opacity:0.6;}
+#calenDiv table.calDay {border-spacing:6px; margin-top:0}
+#calenDiv table.calDay td{ padding:3px 4px; font-size:11px}
+#calenDiv table.calDay th {padding: 0 3px;font-size: 11px;padding-right: 0;padding-left: 1px;color: #888;width: 22px;cursor: default;border-radius: 3px;text-align: center;font-weight: normal;}
+#calenDiv #weekDays{margin-top: 10px;margin-bottom: 5px;border-top: 1px solid #cbcbcb;border-bottom: 1px solid #cbcbcb;border-spacing: 5px;margin-left: 0;color: #868686;}
+#calenDiv .sCalMon {cursor: default;display: inline-block;color: #888;width: 110px;font-size: 12px;}
+table.calDay td:hover{background-color:#e8e8e8;}
+table.calDay{ color:#222; margin-left:-10px; border-spacing:12px;}
+table.calDay td, table.calDay th{ font-size:1.4rem; cursor:default;border-radius:3px; text-align:center;  padding:3px 5px; font-family: helvetica,sans-serif !important; }
+table.calDay td.sel,table.calDay td.sel:hover{color:#fff; background:#b3b3b3; border-radius:3px;}
+table.calDay td.noNum,table.calDay td.lt-gray{color:#d8d8d8;}
+.vpvl, .txt-ctr {text-align: center;}
+#calBtns a, .lyteCalBtns .lyteCalCurrentDate a {color: #338cf0;font-size: 14px;text-decoration: none;}
+#calenDiv #calBtns {width: 183px;margin-left: 10px;border-top: 0;font-size: 11px;padding: 3px 0 12px!important;}
+.arrow {border: solid #666;border-width: 0 1px 1px 0;display: inline-block;height: 6px;width: 6px;}
+#calenDiv .right {transform: rotate(-45deg);-webkit-transform: rotate(-45deg);}
+#calenDiv .left {transform: rotate(135deg); -webkit-transform: rotate(135deg);}
+.mLMinus2{margin-left: -2px;}
+.mRMinus2{margin-right: -2px;}
+.vam{vertical-align: middle;}
+.tempCalDiv{display: none;margin: 0;position: absolute;z-index: 1000;background-color: #fff; border: 1px solid #ccc; -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.3);box-shadow: 0 2px 10px rgba(0,0,0,0.3); border-top: 0;top: 20px;}</style>
 <script>
 
   /* Do not remove this code. */
@@ -953,6 +1000,27 @@ if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)
 {
 alert('Please enter a valid email address. ');
 emailFld[i].focus();
+return false;
+}
+}
+}
+return true;
+}
+function validateDateFormat4805080000002819028()
+{
+var form = document.forms['WebToLeads4805080000002819028'];
+var dateFlds = form.querySelectorAll('[ftype=date]');
+var i;
+for (i = 0; i < dateFlds.length; i++)
+{
+var dateFld = dateFlds[i];
+var usrPtrn = dateFld.placeholder;
+var dateVal = dateFld.value;
+if(dateVal.trim() != ''){
+var vald = dateFormatConvert.validate(dateVal,usrPtrn);
+if(!vald){
+alert('Please enter a valid date ');
+dateFld.focus();
 return false;
 }
 }
@@ -1000,6 +1068,7 @@ if(!validateFileUpload4805080000002819028()){return false;}
 
 if(!validateEmail4805080000002819028()){return false;}
 if(!reCaptchaAlert4805080000002819028()){return false;}
+if(!validateDateFormat4805080000002819028()){return false;}
 document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
 }
 

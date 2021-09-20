@@ -12,11 +12,12 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-                
+              
                 ?>
                 <div data-section="1">
                     <div class="container">
                         <div class=" column is-10 is-offset-1">
+                           
                             <?php the_content(); ?>
                         </div>
                     </div>

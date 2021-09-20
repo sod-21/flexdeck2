@@ -90,8 +90,7 @@ jQuery(function($) {
         arrows: true,
         dots: true,
         swipeToSlide: true,
-        infinite: true,
-        asNavFor: ".image_carousel"
+        infinite: true       
       });
     }
   
