@@ -190,12 +190,12 @@ get_header();
 										border-bottom-color: <?php echo $bg_color; ?>;
 									}
 
-									.new-thumbnail#th-<?php echo $key; ?>.tri-area:before {
+									.new-thumbnail#th-<?php echo $key; ?> .tri-area:before {
 										border-left-color: <?php echo $bg_color; ?>;
 										border-bottom-color: <?php echo $bg_color; ?>;
 									}
 
-									.new-thumbnail#th-<?php echo $key; ?>.tri-area:after {
+									.new-thumbnail#th-<?php echo $key; ?> .tri-area:after {
 										border-right-color: <?php echo $bg_color; ?>;
 										border-top-color: <?php echo $bg_color; ?>;
 									}
