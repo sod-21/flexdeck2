@@ -38,7 +38,7 @@ get_header();
 		$img_carousel = get_field("image_carousel");
 		if ($img_carousel) :
 		?>
-			<div data-section="2">
+			<div data-section="2" class="image_carousel_section">
 				<div class="container">
 					<div class="image_carousel">
 
@@ -70,7 +70,7 @@ get_header();
 		?>
 			<div data-section class="content_block">
 				<div class="container">
-					<div class=" column is-10 is-offset-1">
+					<div class=" column is-10 is-offset-1 content_block2">
 						<?php echo $content_block; ?>
 
 						<?php
@@ -121,7 +121,7 @@ get_header();
 						<?php endif; ?>
 
 						<?php if (!empty($content_block6)) : ?>
-							<div class="  content_block6 columns">
+							<div class="  content_block6 columns is-multiline">
 								<?php
 								foreach ($content_block6 as $c6) :
 								?>
@@ -131,13 +131,13 @@ get_header();
 											<?php echo $c6["content"]; ?>
 
 										</div>
-										<div>
-										<?php endforeach; ?>
-										</div>
-									<?php endif; ?>
 									</div>
+								<?php endforeach; ?>
 							</div>
+						<?php endif; ?>
+						</div>
 					</div>
+				</div>
 				<?php
 			}
 			$item_image_pos = get_field("item_list_image_from_left");
